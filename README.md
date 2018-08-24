@@ -47,3 +47,8 @@ Project for Blibli Future Program Batch 3 Phase 1
 - ABC Inventory
 (http://almyta.com/abc_inventory_software.asp)
 - Delivrd (www.delivrd.com)
+
+
+#### Trello:
+- https://trello.com/b/3CyY4Zkj
+
