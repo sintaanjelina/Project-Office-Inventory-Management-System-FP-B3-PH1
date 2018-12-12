@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/> 
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	
+	<!-- Latest compiled and minified CSS -->
+	<link  rel="stylesheet"  href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+	
+	<!-- jQuery library -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+	
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lato" />
+	
+	<link rel="stylesheet" type="text/css" href="assets/css/home.css" />
+	
+  </head>
+  <body>
+		<div class="wrapper">
+			<!--sidebar-->
+			<nav id="sidebar" class="box-shadow" >
+				<div class="sidebar-header">
+					<a href="home.html" ><img src="assets/images/icons/sidebar-header.png" class="center" alt="Home"/> </a>
+				</div>
+				
+				<ul class="list-unstyled components">
+					
+					<li class="active">
+						<a href="home_admin.html" data-toggle="tooltip" title="Home" >
+							<i class="fa fa-home"> </i>
+						</a>
+		
+					</li>
+					<li> 
+						<a href="#employeeSubmenu" data-toggle="collapse" data-toggle="tooltip" title="Employee" aria-expanded="false" class="dropdown" >
+							<i class="fa fa-users"> </i>
+						</a>
+						<ul class="collapse list-unstyled" id="employeeSubmenu">
+							<li>
+								<div class="dropdown-divider"></div>
+									<a href="add_employee.html" > Add Employee </a>
+								<div class="dropdown-divider"></div>	
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="#itemSubmenu"  data-toggle="collapse" aria-expanded="false" class="dropdown" data-toggle="tooltip" title="Item">
+							<i class="fa fa-briefcase"></i>
+						</a>
+						<ul class="collapse list-unstyled" id="itemSubmenu">
+							<li>
+							    <div class=	"dropdown-divider"></div>
+								<a href="item.html"> Items </a>
+							</li>
+							    <div class="dropdown-divider"></div>
+							<li> 
+								<a href="add_item.html"> Add Item </a>
+							</li>
+								<div class="dropdown-divider" ></div>
+						</ul>
+					</li>
+					<li>
+						<a href="handover_list.html" data-toggle="tooltip" title="Handover List"> 
+							<i class="fa fa-file"> </i>
+						</a>
+					</li>
+				</ul>
+			</nav>
+			 <!-- Page Content  -->
+			<div id="content">
+				<nav class="navbar navbar-expand-lg navbar-light bg-light">
+					<div  class="container">				
+						<div class="dropdown">
+							<button   class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+								<i class="fa fa-user"> Sinta Anjelina </i><!-- Masukkan data login --> 
+								<span class="caret"> </span> </button>
+								<ul class="dropdown-menu">
+									<li> <a href="change_password.html" class="dropdown-item"> change password </a> </li>
+									<div class="content-divider" >  </div>
+									<li> <a href="logout.html"class="dropdown-item" > log out </a> </li>
+								</ul>
+						</div>
+					</div>
+				</nav>
+				<diV class="container">
+					<h1> Home </h1>
+					<div class="row">
+						<div class="col-sm-3">
+							<h4><!-- GET data from database --> 12</h4>
+							<p>Item Out</p>
+						</div>
+						<div class="col-sm-3">
+							<h4><!-- GET data from database --> 12</h4>
+							<p>Pending request</p>
+						</div>
+						<div class="col-sm-3">
+							<h4><!-- GET data from database --> 12</h4>
+							<p>Pending handover</p>
+						</div>	 
+					</div>
+					</br>
+					<h1> Recent Updates </h1>
+					<div class="row">
+						<div class="col-md-10"> 
+								<!--input updateinfo -->
+								<p> {requestID} has been rejected by {employeeID}    {rejectedDate} </p> 
+						</div>
+				</div>		
+			</div>
+		</div>
+	<script>
+	$(document).ready(function(){
+		$('[data-toggle="tooltip"]').tooltip(); 
+	});
+	</script>
+	</body>
+</html>
