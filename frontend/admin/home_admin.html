@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/> 
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		
+	<!-- Latest compiled and minified CSS -->
+	<link  rel="stylesheet"  href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+	
+	<!--Icon source-->
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+	
+	<!--Font-style used -->
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lato" />
+			
+	<!--This pages Customization css-->
+	<link rel="stylesheet" type="text/css" href="../assets/css/home.css" />
+	
+  </head>
+  <body>	
+		<div class="wrapper">
+			<!--sidebar-->
+			<nav id="sidebar" class="box-shadow" >
+				<div class="sidebar-header">
+					<a href="home_admin.html" ><img src="../assets/images/icons/sidebar-header.png" class="center" alt="Home"/> </a>
+				</div>
+
+				<ul class="navbar-nav">
+					
+					<li class="active">
+						<a href="home_admin.html" title="Home" >
+							<i class="fa fa-home"> </i>
+						</a>
+					</li>
+
+					<li>
+						<a href="#employeeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown"  title="Employee">
+							<i class="fa fa-users"> </i>
+						</a>
+						<div class="collapse list-unstyled" id="employeeSubmenu">
+							<div class=	"dropdown-divider"></div>
+							<a href="employee.html"> Employee </a>
+							<div class="dropdown-divider"></div>
+							<a href="add_employee.html"> Add Employee </a>
+							<div class=	"dropdown-divider"></div>
+     					</div>
+     				</li>
+
+					<li>
+						<a href="#itemSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown"  title="Item">
+							<i class="fa fa-briefcase"></i>
+						</a>
+						<ul class="collapse list-unstyled" id="itemSubmenu">
+							<li>
+							    <div class=	"dropdown-divider"></div>
+								<a href="item.html"> Items </a>
+							</li>
+							    <div class="dropdown-divider"></div>
+							<li> 
+								<a href="add_item.html"> Add Item </a>
+							</li>
+								<div class="dropdown-divider" ></div>
+						</ul>
+					</li>
+					<li>
+						<a href="handover_list.html" title="Handover List"> 
+							<i class="fa fa-file"> </i>
+						</a>
+					</li>
+				</ul>
+			</nav>
+			 <!-- Page Content  -->
+			<div id="content">
+				<nav class="navbar navbar-expand-lg navbar-light bg-light navbar-right">
+					<div  class="container">
+						<div class="col-md-9">
+						</div>
+						<div class="dropdown">
+							<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+								<i class="fa fa-user">Nama Admin </i><!-- Masukkan data login --> 
+								</button>
+								<ul class="dropdown-menu">
+									<li> <a href="change_password.html" class="dropdown-item"> change password </a> </li>
+									<div class="content-divider" >  </div>
+									<li> <a href="logout.html"class="dropdown-item" > log out </a> </li>
+								</ul>
+						</div>
+					</div>
+				</nav>
+				<diV class="container">
+					<h1> Home </h1>
+					<div class="row">
+						<div class="col-sm-3">
+							<h4><!-- GET data from database --> 12</h4>
+							<p>Item Out</p>
+						</div>
+						<div class="col-sm-3">
+							<h4><!-- GET data from database --> 12</h4>
+							<p>Pending request</p>
+						</div>
+						<div class="col-sm-3">
+							<h4><!-- GET data from database --> 12</h4>
+							<p>Pending handover</p>
+						</div>	 
+					</div>
+					</br>
+					<h1> Recent Updates </h1>
+					<div class="row">
+						<div class="col-md-10"> 
+								<!--input updateinfo -->
+							<table class="table">
+								<tr> 
+								<td> {requestID} </td>
+								<td> has been rejected by </td>
+								<td> {employeeID}</td>
+								<td> {rejectedDate}</td>
+								</tr>
+							</table>
+						</div>
+				</div>		
+			</div>
+		</div>
+	
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script> 
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script>
+	
+		$( '#sidebar .navbar-nav a' ).on( 'click', function () {
+			$( '#sidebar .navbar-nav' ).find( 'li.active' ).removeClass( 'active' );
+			$( this ).parent( 'li' ).addClass( 'active' );
+		});
+	</script>
+	</body>
+</html>

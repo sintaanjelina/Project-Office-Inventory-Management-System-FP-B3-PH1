@@ -1,8 +1,10 @@
 		body{
 			color:#0023ff;
-			font-family: Lato; 
-		}		
-
+			font-family: "Lato", sans-serif;
+			margin:0 auto;		
+			background-color: rgba(211, 211, 211, 0.3);
+		}
+		
 		#sidebar {
 			width: 160px;
 			position: fixed;
@@ -14,13 +16,12 @@
 			max-width: 80px;
 			text-align: center;
 			height: 100%;
+			background-color: white;
 		 
 		}
-	
+
 		.box-shadow{
-		  position: relative;
-		  box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
-		
+		  box-shadow: 0 0 25px 0 rgba(219, 219, 219, 0.5);
 		}
 
 		.center {
@@ -30,7 +31,7 @@
 		}
 
 		#sidebar ul li a i{
-		   padding: 0px 10px;
+		  padding: 0px 10px;
 		   margin-top: 60%;
 		   margin-right:  10px;
 		   display: block;
@@ -44,22 +45,42 @@
 		}
 		
 		#sidebar i:hover{
+			padding: 0px 10px;
+		   margin-top: 60%;
+		   margin-right:  10px;
+		   display: block;
+		   font-size: 1.8em;
+		   margin-bottom: 5px;
+		   text-decoration: none;					
 			display:inline-block;
 			color:#0023ff;
 		}
 		
-		.navbar-expand-lg > .container, .navbar-expand-lg > .container-fluid{
-			flex-wrap:wrap-reverse;
+		.topmenu{
+			float:right;
 		}
+	
+	
 		.container{
 			margin-right:0px;	
 		}
+		
+		.list-unstyled a:hover{
+			background-color: #0023ff;
+			display: block;
+			text-decoration: none;		
+			color: #ffffff;
+		}
 
+		#sidebar .navbar-nav li.active > a > i {
+			display:inline-block;
+			color:#0023ff;
+		}
+		
 		.col-sm-3{
 			margin-left:4%;
 			border:1px solid #000;
 			display:inline-block;
-			max-widht:10%;
 			float:none;
 			max-width: 10%;
 			max-height:10%;
@@ -67,12 +88,21 @@
 			background-color:white;
 			border-style:none;
 			box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
-	
+			
+		}
+		
+		
+		
+		.container > h1{
+			width:91%;
+			border-bottom: 1px solid #e7e7e7;
+			margin-bottom:2.5%;
 		}
 
 		.row h4, .row p {
 			font-style:italic;
-			text-align:center;		
+			text-align:center;	
+			width:100%;
 		}
 
 		.row h4 {
@@ -90,13 +120,13 @@
 			margin-top:2%;	
 			
 		}
-
+		
 		.col-md-10{
 			margin-left:4%;
+			padding: 2%;
 			border:1px solid #000;
 			float:none;
-			max-width: 100%;
-			padding:0%;
+			max-width: 90%;
 			background-color:white;
 			border-style:none;
 			box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
@@ -105,5 +135,22 @@
 
 		.col-md-10 p{
 			padding:2% 0 2% 2%;
-			text-align:left;
+			text-align:center;
 		}
+		
+		.row i  {
+			padding: 14% 0 8% 34% ;
+			font-size:2.8em;
+		}
+		
+		th i{
+			font-size:1em;
+		}
+		.row a{
+			text-decoration:none;
+		}
+		.left-border{
+			height:50%;
+			border-left: 8px solid #0023ff;	
+		}
+	
