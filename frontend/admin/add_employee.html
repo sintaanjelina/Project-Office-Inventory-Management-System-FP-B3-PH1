@@ -15,9 +15,7 @@
 			
 	<!--This pages Customization css-->
 	<link rel="stylesheet" type="text/css" href="../assets/css/home.css" />
-	
-	<link rel="stylesheet" type="text/css" href="../assets/css/input.css" />
-	
+		<link rel="stylesheet" type="text/css" href="../assets/css/input.css" />
   </head>
   <body>	
 		<div class="wrapper">
@@ -89,13 +87,62 @@
 						</div>
 					</div>
 				</nav>
-				<diV class="container">
-					<h1> Employee </h1>
-					
-				</div>		
-			</div>
-		</div>
-	
+			  <div class="container">
+				<h1>Add Employee</h1>
+				<form action="">
+				  <div class="form-group">
+					<label for="employeeID">Id Employee:</label>
+					<input type="text" class="form-control" id="employeeID" placeholder="Enter Employee ID" name="employeeID">
+				  </div>
+				  <div class="form-group">
+					<label for="superiorID">Id Superior:</label>
+					<input type="text" class="form-control" id="superiorID" placeholder="Enter Superior ID" name="superiorID">
+				  </div>
+				  <div class="form-group">
+					<label for="username">Username:</label>
+					<input type="text" class="form-control" id="username" placeholder="Enter Employee Username" name="username">
+				  </div>
+				  <div class="form-group">
+					<label for="password">Password:</label>
+					<input type="password" class="form-control" id="password" placeholder="Enter password" name="password">
+				  </div>
+				  <div class="form-group">
+					<label for="name">Name:</label>
+					<input type="text" class="form-control" id="name" placeholder="Enter Employee Name" name="name">
+				  </div>
+				  <div class="form-group">
+					<label for="birthdate">Birthdate:</label>
+					<input type="date" class="form-control" id="birthdate" placeholder="Enter Employee Birthdate" name="username">
+				  </div>
+				  <div class="form-group">
+				    <label for="role">Role:</label>
+				    <select class="form-control" id="role">
+					  <option> admin</option>
+					  <option> superior</option>
+				      <option> employee</option>
+					</select>
+				  </div>
+				  <div class="form-group">
+				    <label for="division">Division:</label>
+				    <select class="form-control" id="position">
+					  <option> Department of Human Resource</option>
+					  <option> Depaertment of Software Engineer</option>
+				      <option> Department of Finance</option>
+					</select>
+				  </div>
+				  <div class="form-group">
+					<label for="position">Position:</label>
+					<input type="text" class="form-control" id="position" placeholder="Enter Employee Position" name="position">
+				  </div>
+				  <div class="form-group">
+					<label for="contactNumber">Contact Number:</label>
+					<input type="tel" class="form-control" id="contactNumber" placeholder="Enter Contact Number" name="contactNumber">
+				  </div>		
+				  <button type="submit" class="btn btn-success">Submit</button>
+				  <button type="reset" class="btn btn-danger"> Reset </button>
+				</form>
+			  </div>
+
 	<!-- jQuery library -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script> 

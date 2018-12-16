@@ -15,9 +15,7 @@
 			
 	<!--This pages Customization css-->
 	<link rel="stylesheet" type="text/css" href="../assets/css/home.css" />
-	
-	<link rel="stylesheet" type="text/css" href="../assets/css/input.css" />
-	
+		<link rel="stylesheet" type="text/css" href="../assets/css/input.css" />
   </head>
   <body>	
 		<div class="wrapper">
@@ -29,13 +27,13 @@
 
 				<ul class="navbar-nav">
 					
-					<li >
+					<li>
 						<a href="home_admin.html" title="Home" >
 							<i class="fa fa-home"> </i>
 						</a>
 					</li>
 
-					<li class="active">
+					<li>
 						<a href="#employeeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown"  title="Employee">
 							<i class="fa fa-users"> </i>
 						</a>
@@ -48,7 +46,7 @@
      					</div>
      				</li>
 
-					<li>
+					<li class="active">
 						<a href="#itemSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown"  title="Item">
 							<i class="fa fa-briefcase"></i>
 						</a>
@@ -89,13 +87,34 @@
 						</div>
 					</div>
 				</nav>
-				<diV class="container">
-					<h1> Employee </h1>
-					
-				</div>		
-			</div>
-		</div>
-	
+			  <div class="container">
+				<h1>Update Item</h1>
+				<form action="">
+				  <div class="form-group">
+					<label for="itemID">Id Item:</label>
+					<input type="text" class="form-control" id="itemID" placeholder="Enter Item ID" name="itemID">
+				  </div>
+				  <div class="form-group">
+					<label for="name">Name:</label>
+					<input type="text" class="form-control" id="name" placeholder="Enter Item Name" name="name">
+				  </div>
+				  <div class="form-group">
+					<label for="price">Price:</label>
+					<input type="text" class="form-control" id="price" placeholder="Enter Price" name="price">
+				  </div>
+				  <div class="form-group">
+					<label for="quantity">Quantity:</label>
+					<input type="number" class="form-control" id="quantity" placeholder="Enter Item Quantity" name="quantity">
+				  </div>
+				  <div class="form-group">
+					<label for="imagePath">Image:</label>
+					<input type="file" class="form-control-file border" name="imagePath" id="imagePath" placeholder="Enter Item Image">
+				  </div>
+				  <button type="submit" class="btn btn-success">Submit</button>
+				  <button type="reset" class="btn btn-danger"> Reset </button>
+				</form>
+			  </div>
+
 	<!-- jQuery library -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script> 

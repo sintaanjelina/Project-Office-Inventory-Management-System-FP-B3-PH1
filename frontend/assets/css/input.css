@@ -1,0 +1,23 @@
+body{
+	background-color:white;
+}
+
+form{
+	width:80%;
+	margin-left:5%;
+}
+
+.form-control{
+	border: 1px solid #0023ff;
+}
+
+.btn-success{
+	margin-left:40%;
+	background-color: #0023ff;
+	border: none;
+}
+.btn-danger{
+	margin-left:4%;
+	background-color: #0023ff;	
+	border: none;
+}
