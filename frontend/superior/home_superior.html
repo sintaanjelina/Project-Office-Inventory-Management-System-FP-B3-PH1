@@ -34,7 +34,7 @@
 					</li>
 					
 					<li>
-						<a href="#employeeReqSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown"  title="Employee Request">
+						<a href="#employeeReqSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"  title="Employee Request">
 							<i class="fa fa-users"> </i>
 						</a>
 						<div class="collapse list-unstyled" id="employeeReqSubmenu">
@@ -52,7 +52,7 @@
 						</a>
 					</li>
 					<li>
-						<a href="#myRequestSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown"  title="MyRequest">
+						<a href="#myRequestSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"  title="MyRequest">
 							<i class="fa fa-file"> </i>
 						</a>
 						<ul class="collapse list-unstyled" id="myRequestSubmenu">
@@ -115,7 +115,7 @@
 								<tr>
 								<th>
 									<a href="#" data-toggle="modal" data-target="#details">
-									<i class="fa fa-question-circle"></i>
+									<i class="fa fa-question-circle fa-lg"></i>
 								</a>
 								</th>
 								<td> {employeeName} </td>
@@ -154,12 +154,7 @@
 
 	<!-- Latest compiled JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-<script>
-	
-		$( '#sidebar .navbar-nav a' ).on( 'click', function () {
-			$( '#sidebar .navbar-nav' ).find( 'li.active' ).removeClass( 'active' );
-			$( this ).parent( 'li' ).addClass( 'active' );
-		});
-	</script>
+	<!--custom javascript-->
+	<script type="text/javascript" src="../assets/js/navbar.js"></script>
 	</body>
 </html>

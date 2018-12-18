@@ -34,7 +34,7 @@
 					</li>
 
 					<li>
-						<a href="#employeeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown"  title="Employee">
+						<a href="#employeeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"  title="Employee">
 							<i class="fa fa-users"> </i>
 						</a>
 						<div class="collapse list-unstyled" id="employeeSubmenu">
@@ -47,7 +47,7 @@
      				</li>
 
 					<li>
-						<a href="#itemSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown"  title="Item">
+						<a href="#itemSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"  title="Item">
 							<i class="fa fa-briefcase"></i>
 						</a>
 						<ul class="collapse list-unstyled" id="itemSubmenu">
@@ -63,10 +63,20 @@
 						</ul>
 					</li>
 					<li>
-						<a href="handover_list.html" title="Handover List"> 
+						<a href="#requestSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"  title="Request Submenu">
 							<i class="fa fa-file"> </i>
 						</a>
-					</li>
+						<ul class="collapse list-unstyled" id="requestSubmenu">
+							<li>
+							    <div class=	"dropdown-divider"></div>
+								<a href="request_history.html"> Items </a>
+							</li>
+							    <div class="dropdown-divider"></div>
+							<li> 
+								<a href="handover_list.html"> Request Handedover - Returned </a>
+							</li>
+						</ul>
+					 </li>
 				</ul>
 			</nav>
 			 <!-- Page Content  -->
@@ -127,12 +137,7 @@
 
 	<!-- Latest compiled JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-<script>
-	
-		$( '#sidebar .navbar-nav a' ).on( 'click', function () {
-			$( '#sidebar .navbar-nav' ).find( 'li.active' ).removeClass( 'active' );
-			$( this ).parent( 'li' ).addClass( 'active' );
-		});
-	</script>
+	<!--custom javascript-->
+	<script type="text/javascript" src="../assets/js/navbar.js"></script>
 	</body>
 </html>

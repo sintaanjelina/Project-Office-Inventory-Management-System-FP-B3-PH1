@@ -34,8 +34,8 @@
 					</li>
 
 					<li>
-						<a href="#employeeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown"  title="Employee">
-							<i class="fa fa-users"> </i>
+						<a href="#employeeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"  title="Employee">
+							<i class="fa fa-users"> </i>  
 						</a>
 						<div class="collapse list-unstyled" id="employeeSubmenu">
 							<div class=	"dropdown-divider"></div>
@@ -47,7 +47,7 @@
      				</li>
 
 					<li class="active">
-						<a href="#itemSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown"  title="Item">
+						<a href="#itemSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"  title="Item">
 							<i class="fa fa-briefcase"></i>
 						</a>
 						<ul class="collapse list-unstyled" id="itemSubmenu">
@@ -63,10 +63,21 @@
 						</ul>
 					</li>
 					<li>
-						<a href="handover_list.html" title="Handover List"> 
+						<li>
+						<a href="#requestSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"  title="Request Submenu">
 							<i class="fa fa-file"> </i>
 						</a>
-					</li>
+						<ul class="collapse list-unstyled" id="requestSubmenu">
+							<li>
+							    <div class=	"dropdown-divider"></div>
+								<a href="request_history.html"> Items </a>
+							</li>
+							    <div class="dropdown-divider"></div>
+							<li> 
+								<a href="handover_list.html"> Request Handedover - Returned </a>
+							</li>
+						</ul>
+					 </li>
 				</ul>
 			</nav>
 			 <!-- Page Content  -->
@@ -89,22 +100,25 @@
 				</nav>
 			  <div class="container">
 				<h1>Update Item</h1>
-				<form action="">
+				<form action="" class="form-horizontal">
 				  <div class="form-group">
 					<label for="itemID">Id Item:</label>
-					<input type="text" class="form-control" id="itemID" placeholder="Enter Item ID" name="itemID">
+					<input type="text" class="form-control" id="itemID" placeholder="Enter Item ID" name="itemID" required>
+					 <span class="glyphicon glyphicon-ok form-control-feedback"></span>
+				 </div>
+				  <div class="form-group">
+					<label for="name">Name:</label>	
+					<input type="text" class="form-control" id="name" placeholder="Enter Item Name" name="name" required>
 				  </div>
 				  <div class="form-group">
-					<label for="name">Name:</label>
-					<input type="text" class="form-control" id="name" placeholder="Enter Item Name" name="name">
-				  </div>
-				  <div class="form-group">
-					<label for="price">Price:</label>
-					<input type="text" class="form-control" id="price" placeholder="Enter Price" name="price">
+					<label for="price">Price:</label>		
+					  <div class="input-group-prepend">
+						<span class="input-group-text">Rp</span>
+					<input type="number" class="form-control" id="price" placeholder="Enter Price" name="price" required>
 				  </div>
 				  <div class="form-group">
 					<label for="quantity">Quantity:</label>
-					<input type="number" class="form-control" id="quantity" placeholder="Enter Item Quantity" name="quantity">
+					<input type="number" class="form-control" id="quantity" placeholder="Enter Item Quantity" name="quantity" required>
 				  </div>
 				  <div class="form-group">
 					<label for="imagePath">Image:</label>
@@ -121,12 +135,7 @@
 
 	<!-- Latest compiled JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-	<script>
-	
-		$( '#sidebar .navbar-nav a' ).on( 'click', function () {
-			$( '#sidebar .navbar-nav' ).find( 'li.active' ).removeClass( 'active' );
-			$( this ).parent( 'li' ).addClass( 'active' );
-		});
-	</script>
+	<!--custom javascript-->
+	<script type="text/javascript" src="../assets/js/navbar.js"></script>
 	</body>
 </html>

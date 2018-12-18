@@ -6,7 +6,7 @@
 		}
 		
 		#sidebar {
-			width: 160px;
+			width: 200px;
 			position: fixed;
 			z-index: 1;
 			top: 0;
@@ -31,11 +31,8 @@
 		}
 
 		#sidebar ul li a i{
-		  padding: 0px 10px;
 		   margin-top: 60%;
-		   margin-right:  10px;
-		   display: block;
-		   font-size: 1.8em;
+		   font-size: 1.9em;
 		   margin-bottom: 5px;
 			color:#d8d8d8 ;
 					
@@ -45,9 +42,9 @@
 		}
 		
 		#sidebar i:hover{
-			padding: 0px 10px;
+			padding: 0px 0px;
 		   margin-top: 60%;
-		   margin-right:  10px;
+		   margin-right:  0px;
 		   display: block;
 		   font-size: 1.8em;
 		   margin-bottom: 5px;
@@ -90,9 +87,7 @@
 			box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
 			
 		}
-		
-		
-		
+				
 		.container > h1{
 			width:91%;
 			border-bottom: 1px solid #e7e7e7;
@@ -144,7 +139,7 @@
 		}
 		
 		th i{
-			font-size:1em;
+			font-size:1rem;
 		}
 		.row a{
 			text-decoration:none;
@@ -152,5 +147,9 @@
 		.left-border{
 			height:50%;
 			border-left: 8px solid #0023ff;	
+		}
+
+		.fa-question-circle{
+			color:red;
 		}
 	

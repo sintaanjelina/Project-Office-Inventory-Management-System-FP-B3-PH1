@@ -34,7 +34,7 @@
 					</li>
 
 					<li class="active">
-						<a href="#employeeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown"  title="Employee">
+						<a href="#employeeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"  title="Employee">
 							<i class="fa fa-users"> </i>
 						</a>
 						<div class="collapse list-unstyled" id="employeeSubmenu">
@@ -47,7 +47,8 @@
      				</li>
 
 					<li>
-						<a href="#itemSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown"  title="Item">
+						<a href="#itemSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle
+						"  title="Item">
 							<i class="fa fa-briefcase"></i>
 						</a>
 						<ul class="collapse list-unstyled" id="itemSubmenu">
@@ -63,10 +64,20 @@
 						</ul>
 					</li>
 					<li>
-						<a href="handover_list.html" title="Handover List"> 
+						<a href="#requestSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"  title="Request Submenu">
 							<i class="fa fa-file"> </i>
 						</a>
-					</li>
+						<ul class="collapse list-unstyled" id="requestSubmenu">
+							<li>
+							    <div class=	"dropdown-divider"></div>
+								<a href="request_history.html"> Items </a>
+							</li>
+							    <div class="dropdown-divider"></div>
+							<li> 
+								<a href="handover_list.html"> Request Handedover - Returned </a>
+							</li>
+						</ul>
+					 </li>
 				</ul>
 			</nav>
 			 <!-- Page Content  -->
@@ -92,31 +103,31 @@
 				<form action="">
 				  <div class="form-group">
 					<label for="employeeID">Id Employee:</label>
-					<input type="text" class="form-control" id="employeeID" placeholder="Enter Employee ID" name="employeeID">
+					<input type="text" class="form-control" id="employeeID" placeholder="Enter Employee ID" name="employeeID" required>
 				  </div>
 				  <div class="form-group">
 					<label for="superiorID">Id Superior:</label>
-					<input type="text" class="form-control" id="superiorID" placeholder="Enter Superior ID" name="superiorID">
+					<input type="text" class="form-control" id="superiorID" placeholder="Enter Superior ID" name="superiorID" required>
 				  </div>
 				  <div class="form-group">
 					<label for="username">Username:</label>
-					<input type="text" class="form-control" id="username" placeholder="Enter Employee Username" name="username">
+					<input type="text" class="form-control" id="username" placeholder="Enter Employee Username" name="username" required> 
 				  </div>
 				  <div class="form-group">
 					<label for="password">Password:</label>
-					<input type="password" class="form-control" id="password" placeholder="Enter password" name="password">
+					<input type="password" class="form-control" id="password" placeholder="Enter password" name="password" required>
 				  </div>
 				  <div class="form-group">
 					<label for="name">Name:</label>
-					<input type="text" class="form-control" id="name" placeholder="Enter Employee Name" name="name">
+					<input type="text" class="form-control" id="name" placeholder="Enter Employee Name" name="name" required>
 				  </div>
 				  <div class="form-group">
 					<label for="birthdate">Birthdate:</label>
-					<input type="date" class="form-control" id="birthdate" placeholder="Enter Employee Birthdate" name="username">
+					<input type="date" class="form-control" id="birthdate" placeholder="Enter Employee Birthdate" name="username" required>
 				  </div>
 				  <div class="form-group">
-				    <label for="role">Role:</label>
-				    <select class="form-control" id="role">
+				    <label for="role" >Role:</label>
+				    <select class="form-control" id="role" required>
 					  <option> admin</option>
 					  <option> superior</option>
 				      <option> employee</option>
@@ -124,7 +135,7 @@
 				  </div>
 				  <div class="form-group">
 				    <label for="division">Division:</label>
-				    <select class="form-control" id="position">
+				    <select class="form-control" id="position" required>
 					  <option> Department of Human Resource</option>
 					  <option> Depaertment of Software Engineer</option>
 				      <option> Department of Finance</option>
@@ -132,7 +143,7 @@
 				  </div>
 				  <div class="form-group">
 					<label for="position">Position:</label>
-					<input type="text" class="form-control" id="position" placeholder="Enter Employee Position" name="position">
+					<input type="text" class="form-control" id="position" placeholder="Enter Employee Position" name="position" required>
 				  </div>
 				  <div class="form-group">
 					<label for="contactNumber">Contact Number:</label>
@@ -149,12 +160,7 @@
 
 	<!-- Latest compiled JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-	<script>
-	
-		$( '#sidebar .navbar-nav a' ).on( 'click', function () {
-			$( '#sidebar .navbar-nav' ).find( 'li.active' ).removeClass( 'active' );
-			$( this ).parent( 'li' ).addClass( 'active' );
-		});
-	</script>
+	<!--custom javascript-->
+	<script type="text/javascript" src="../assets/js/navbar.js"></script>
 	</body>
 </html>
