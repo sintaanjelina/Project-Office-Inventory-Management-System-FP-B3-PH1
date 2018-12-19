@@ -22,65 +22,43 @@
   <body>	
 		<div class="wrapper">
 			<!--sidebar-->
-			<nav id="sidebar" class="box-shadow" >
+				<nav id="sidebar" class="box-shadow" >
 				<div class="sidebar-header">
-					<a href="home_admin.html" ><img src="../assets/images/icons/sidebar-header.png" class="center" alt="Home"/> </a>
+					<a href="home_employee.html" ><img src="../assets/images/icons/sidebar-header.png" class="center" alt="Home"/> </a>
 				</div>
 
 				<ul class="navbar-nav">
 					
 					<li >
-						<a href="home_admin.html" title="Home" >
+						<a href="home_employee.html" title="Home" >
 							<i class="fa fa-home"> </i>
-	
 						</a>
 					</li>
-
-					<li >
-						<a href="#employeeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"  title="Employee">
-							<i class="fa fa-users"> </i>
-						</a>
-						<div class="collapse list-unstyled" id="employeeSubmenu">
-							<div class=	"dropdown-divider"></div>
-							<a href="employee.html"> Employee </a>
-							<div class="dropdown-divider"></div>
-							<a href="add_employee.html"> Add Employee </a>
-							<div class=	"dropdown-divider"></div>
-     					</div>
-     				</li>
 
 					<li>
-						<a href="#itemSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"  title="Item">
+						<a href="request_item.html" title="Items"> 						
 							<i class="fa fa-briefcase"></i>
 						</a>
-						<ul class="collapse list-unstyled" id="itemSubmenu">
-							<li>
-							    <div class=	"dropdown-divider"></div>
-								<a href="item.html"> Items </a>
-							</li>
-							    <div class="dropdown-divider"></div>
-							<li> 
-								<a href="add_item.html"> Add Item </a>
-							</li>
-								<div class="dropdown-divider" ></div>
-						</ul>
 					</li>
 					<li class="active">
-						<li>
-						<a href="#requestSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"  title="Request Submenu">
+						<a href="#myRequestSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"  title="MyRequest">
 							<i class="fa fa-file"> </i>
 						</a>
-						<ul class="collapse list-unstyled" id="requestSubmenu">
+						<ul class="collapse list-unstyled" id="myRequestSubmenu">
 							<li>
 							    <div class=	"dropdown-divider"></div>
-								<a href="request_history.html"> Requests History </a>
+								<a href="my_request.html"> My Request </a>
 							</li>
 							    <div class="dropdown-divider"></div>
 							<li> 
-								<a href="handover_list.html"> Request Handedover - Returned </a>
+								<a href="onprocess_request.html"> On Process </a>
+							</li>
+								<div class="dropdown-divider" ></div>
+							<li> 
+								<a href="returned_item.html"> Returned </a>
 							</li>
 						</ul>
-					 </li>
+					</li>
 				</ul>
 			</nav>
 			 <!-- Page Content  -->
@@ -91,7 +69,7 @@
 						</div>
 						<div class="dropdown">
 							<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
-								<i class="fa fa-user">Nama Admin </i><!-- Masukkan data login --> 
+								<i class="fa fa-user">Nama Employee </i><!-- Masukkan data login --> 
 								</button>
 								<ul class="dropdown-menu">
 									<li> <a href="change_password.html" class="dropdown-item"> change password </a> </li>
@@ -102,10 +80,48 @@
 					</div>
 				</nav>
 				<div class="container">
-					<h1> Employee </h1>
+					<h1> On Process Request</h1>		
+					 <div class="input-group col-md-4">
+				      <input class="form-control py-2" type="search" placeholder="Search..." id="search">
+				     		<span class="input-group-append">
+				                  <div class="input-group-text bg-transparent"><i class="fa fa-search"></i></div>
+				            </span>
+					</div>
 
-							
+					<div class="table-responsive-lg">
+				    <form action="">
+					<table class="table table-bordered">
+					<tr>
+						<th> No </th>
+						<th> Request Id	</th>
+						<th> Item id </th>
+						<th> Item name </th>
+						<th> Quantity </th>
+						<th> Requested date </th>
+						<th> Status </th>
+						<th> Action  </th>
+					
+					</tr>		
+					<tr>
+						<td> </td>
+						<td> </td>
+						<td> </td>
+						<td> </td>
+						<td> </td>
+						<td> </td>
+						<td> </td>
+						<td> 
+							<button class="btn btn-warning">
+								cancel
+							</button>
+						</td>
+						 
+					</tr>
+				</table>
+			</form>
+ 								
 				</div>	
+
 			</div>
 		</div>
 	

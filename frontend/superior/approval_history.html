@@ -22,64 +22,56 @@
   <body>	
 		<div class="wrapper">
 			<!--sidebar-->
-			<nav id="sidebar" class="box-shadow" >
+				<nav id="sidebar" class="box-shadow" >
 				<div class="sidebar-header">
-					<a href="home_admin.html" ><img src="../assets/images/icons/sidebar-header.png" class="center" alt="Home"/> </a>
+					<a href="home_superior.html" ><img src="../assets/images/icons/sidebar-header.png" class="center" alt="Home"/> </a>
 				</div>
 
 				<ul class="navbar-nav">
 					
 					<li >
-						<a href="home_admin.html" title="Home" >
+						<a href="home_superior.html" title="Home" >
 							<i class="fa fa-home"> </i>
-	
 						</a>
 					</li>
-
-					<li >
-						<a href="#employeeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"  title="Employee">
+					
+					<li class="active">
+						<a href="#employeeReqSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"  title="Employee Request">
 							<i class="fa fa-users"> </i>
 						</a>
-						<div class="collapse list-unstyled" id="employeeSubmenu">
+						<div class="collapse list-unstyled" id="employeeReqSubmenu">
 							<div class=	"dropdown-divider"></div>
-							<a href="employee.html"> Employee </a>
+							<a href="approval_req_list.html"> Approval Requests </a>
 							<div class="dropdown-divider"></div>
-							<a href="add_employee.html"> Add Employee </a>
+							<a href="approval_history.html"> Approval History </a>
 							<div class=	"dropdown-divider"></div>
      					</div>
      				</li>
 
 					<li>
-						<a href="#itemSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"  title="Item">
+						<a href="request_item.html"> 		
 							<i class="fa fa-briefcase"></i>
 						</a>
-						<ul class="collapse list-unstyled" id="itemSubmenu">
-							<li>
-							    <div class=	"dropdown-divider"></div>
-								<a href="item.html"> Items </a>
-							</li>
-							    <div class="dropdown-divider"></div>
-							<li> 
-								<a href="add_item.html"> Add Item </a>
-							</li>
-								<div class="dropdown-divider" ></div>
-						</ul>
 					</li>
-					<li class="active">
-						<a href="#requestSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"  title="Request Submenu">
+					<li>
+						<a href="#myRequestSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"  title="MyRequest">
 							<i class="fa fa-file"> </i>
 						</a>
-						<ul class="collapse list-unstyled" id="requestSubmenu">
+						<ul class="collapse list-unstyled" id="myRequestSubmenu">
 							<li>
 							    <div class=	"dropdown-divider"></div>
-								<a href="request_history.html"> Requests History </a>
+								<a href="my_request.html"> My Request </a>
 							</li>
 							    <div class="dropdown-divider"></div>
 							<li> 
-								<a href="handover_list.html"> Request Handedover - Returned </a>
+								<a href="onprocess_request.html"> On Process </a>
+							</li>
+								<div class="dropdown-divider" ></div>
+							<li> 
+								<a href="returned_item.html"> Returned </a>
 							</li>
 						</ul>
-					 </li>
+					</li>
 				</ul>
 			</nav>
 			 <!-- Page Content  -->
@@ -90,7 +82,7 @@
 						</div>
 						<div class="dropdown">
 							<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
-								<i class="fa fa-user">Nama Admin </i><!-- Masukkan data login --> 
+								<i class="fa fa-user">Nama Superior </i><!-- Masukkan data login --> 
 								</button>
 								<ul class="dropdown-menu">
 									<li> <a href="change_password.html" class="dropdown-item"> change password </a> </li>
@@ -101,53 +93,39 @@
 					</div>
 				</nav>
 				<div class="container">
-					<h1> Request Handedover - Returned </h1>
-					<div class="input-group col-md-4">
+					<h1> Approval History </h1>		
+					 <div class="input-group col-md-4">
 				      <input class="form-control py-2" type="search" placeholder="Search..." id="search">
 				     		<span class="input-group-append">
 				                  <div class="input-group-text bg-transparent"><i class="fa fa-search"></i></div>
 				            </span>
 					</div>
 
-					<div class="table-responsive-md">
+					<div class="table-responsive-lg">
 				    <form action="">
 					<table class="table table-bordered">
 					<tr>
-						<th> Details </th>
+						<th> No </th>
 						<th> Request Id	</th>
 						<th> Employee Id </th>
 						<th> Employee name </th>
 						<th> Item id </th>
 						<th> Item name </th>
 						<th> Quantity </th>
-						<!--<th> Approved date </th>
-						<th> Handedover date </th>
-						<th> Returned date </th> -->
-						<th> Action </th>
+						<th> Requested date </th>
+						<th> Status </th>
+						<th> Approval Date </th>
 					</tr>		
 					<tr>
-						<td>
-						<a href="#" data-toggle="modal" data-target="#details">
-									<i class="fa fa-question-circle fa-lg"></i>
-						</a>		
-						</td>
 						<td> </td>
 						<td> </td>
 						<td> </td>
 						<td> </td>
 						<td> </td>
 						<td> </td>
-						<td> 
-
-					<div class="btn-group">
-					  <select class="form-control" name="handover-action" id="handover-action" onchange="this.form.submit()">
-					      <option value="approved"> Approved </option>
-					      <option value="ready_to_pickup">Ready to pickup</option>
-					      <option value="handed_over">Handed Over</option>
-					      <option value="returned">Returned</option>
-				    </select>
-					</div>
-						</td>
+						<td> </td>
+						<td> </td>
+						<td> </td> 
 					</tr>
 				</table>
 			</form>
