@@ -13,7 +13,7 @@
 			left: 0;
 			overflow-x: hidden;
 			padding-top: 16px;
-			max-width: 80px;
+			max-width: 100px;
 			text-align: center;
 			height: 100%;
 			background-color: white;
@@ -152,4 +152,7 @@
 		.fa-question-circle{
 			color:red;
 		}
-	
+
+		.col-md-12 {
+			margin-bottom: 2em; 
+		}

@@ -5,15 +5,15 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1"/>
 		
 	<!-- Latest compiled and minified CSS -->
-	<link  rel="stylesheet"  href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+	<link  rel="stylesheet"  href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"/>
 	<link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css"/>
-	
+
 	<!--Icon source-->
-	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"/>
 	
 	<!--Font-style used -->
-	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lato" />
-			
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lato"/>
+	
 	<!--This pages Customization css-->
 	<link rel="stylesheet" type="text/css" href="../assets/css/home.css" />
 	
@@ -42,7 +42,7 @@
 							<i class="fa fa-users"> </i>
 						</a>
 						<div class="collapse list-unstyled" id="employeeSubmenu">
-							<div class=	"dropdown-divider"></div>
+							<div class=	"dropdown-divider"></div>		
 							<a href="employee.html"> Employee </a>
 							<div class="dropdown-divider"></div>
 							<a href="add_employee.html"> Add Employee </a>
@@ -50,7 +50,7 @@
      					</div>
      				</li>
 
-					<li>
+					<li class="active">
 						<a href="#itemSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"  title="Item">
 							<i class="fa fa-briefcase"></i>
 						</a>
@@ -66,7 +66,7 @@
 								<div class="dropdown-divider" ></div>
 						</ul>
 					</li>
-					<li class="active">
+					<li>
 						<a href="#requestSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"  title="Request Submenu">
 							<i class="fa fa-file"> </i>
 						</a>
@@ -102,46 +102,64 @@
 					</div>
 				</nav>
 				<div class="container">
-					<h1> Request Activity History </h1>
-					<!--<div class="input-group col-md-4">
-				      <input class="form-control py-2" type="search" placeholder="Search..." id="search">
-				     		<span class="input-group-append">
-				                  <div class="input-group-text bg-transparent"><i class="fa fa-search"></i></div>
-				            </span>
-					</div> -->
-					<div class="table-responsive">
-					<table class="table table-bordered" id="tbl_requestact_history">
-					<thead>
-					<tr>
-						<th> Print </th>
-						<th> Request Id	</th>
-						<th> Employee Id </th>
-						<th> Employee name </th>
-						<th> Superior Id </th>
-						<th> Superior Name </th>
-						<th> Item id </th>
-						<th> Item name </th>
-						<th> Quantity </th>
-						<th> Transaction </th>
-						<th> Transaction Date </th>
-					</tr>	
-					</thead>
-					<tbody>
-					<tr>
-						<td> <button type="button" class="btn btn-light" id="print"> <span class="fa fa-print"> </span> </button> </td>
-						<td> </td>
-						<td> </td>
-						<td> </td>
-						<td> </td>
-						<td> </td>
-						<td> </td>
-						<td> </td>
-						<td> </td>
-						<td> </td>
-						<td> </td>
-					</tr>
-					</tbody>	
-				</table>			
+					<h1> Items </h1>
+  						<div class="col-md-10">
+  	                 		<div class="btn btn-inline">
+					            <button type="button" class="btn btn-warning" id="edit"> <span class="fa fa-pencil-square-o"> </span> Edit </button>
+					           	<button type="button" class="btn btn-danger" id="delete"> <span class="fa fa-trash-o"> </span> Delete </button>
+					        </div>   	
+					        <div class="btn-add">
+					           	<a type="button" class="btn btn-dark" id="add" href="add_item.html"><i class="fa fa-briefcase"> </i>
+					           		<i class="fa fa-plus"> </i>
+					           	Add </a>
+					           </div>
+                        	</div>   
+                        <div class="col-md-10">
+                            <div class="table-responsive">
+					        <table class="table" id="tbl_item">
+					          <thead>
+					            <tr>
+					               <th>
+					               	<input type="checkbox" id="check-all">
+					               	</th>
+					               	<th>No</th>
+					              	<th> Item ID </th>
+					              	<th> Name  </th>
+					              	<th> Price </th>
+					              	<th> Quantity </th>
+					              	<th> Image </th>
+					              	<th> Description </th>
+					              	<th> Action </th> 
+					            </tr>
+					          </thead>
+					          <tbody>
+					            <tr>
+					              <td><input type="checkbox" id="cek_item[]">
+					              	<input type="hidden" name="itemID[]" id="itemID[]" value="itemID[]">
+					              	<input type="hidden" name="name[]" id="name[]" value="name[]">
+					              	<input type="hidden" name="price[]" id="price[]" value="price[]">
+					              	<input type="hidden" name="quantity[]" id="quantity[]" value="quantity[]">
+					              	<input type="hidden" name="imagePath[]" id="imagePath[]" value="imagePath[]">
+					              	<input type="hidden" name="description[]" id="description[]" value="description[]">
+					              </td>
+					              <td> <!-- Nomor ++ --> </td>
+					              <td><!-- ajax panggil itemID[] --> </td>
+					              <td><!-- ajax panggil name[] --></td>
+					              <td><!-- ajax panggil price[] --></td>
+					              <td><!-- ajax panggil quantity[] --></td>
+					              <td><!-- ajax panggil imagePath[] --></td>
+					              <td><!-- ajax panggil description[] --> </td>
+					              <td>
+					              	<div class="btn-group btn-inline">
+					              		<button type="button" class="btn btn-warning" id="edit"> <span class="fa fa-pencil-square-o"> </span></button>
+					           			<button type="button" class="btn btn-danger" id="delete"> <span class="fa fa-trash-o"> </span></button>
+					              	</div>
+					              </td>
+					            </tr>
+					          </tbody>
+					        </table>
+					      </div>
+				    </div>			
 				</div>	
 			</div>
 		</div>
@@ -150,7 +168,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script> 
 	<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
-
+	
 	<!-- Latest compiled JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 

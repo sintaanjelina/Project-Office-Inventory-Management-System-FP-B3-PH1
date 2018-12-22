@@ -7,14 +7,14 @@
 	<!-- Latest compiled and minified CSS -->
 	<link  rel="stylesheet"  href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css"/>
-	
+
 	<!--Icon source-->
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 	
 	<!--Font-style used -->
 	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lato" />
-			
-	<!--This pages Customization css-->
+	
+<!--This pages Customization css-->
 	<link rel="stylesheet" type="text/css" href="../assets/css/home.css" />
 	
 	<link rel="stylesheet" type="text/css" href="../assets/css/input.css" />
@@ -23,38 +23,25 @@
   <body>	
 		<div class="wrapper">
 			<!--sidebar-->
-				<nav id="sidebar" class="box-shadow" >
+			<nav id="sidebar" class="box-shadow" >
 				<div class="sidebar-header">
-					<a href="home_superior.html" ><img src="../assets/images/icons/sidebar-header.png" class="center" alt="Home"/> </a>
+					<a href="home_employee.html" ><img src="../assets/images/icons/sidebar-header.png" class="center" alt="Home"/> </a>
 				</div>
 
 				<ul class="navbar-nav">
 					
 					<li >
-						<a href="home_superior.html" title="Home" >
+						<a href="home_employee.html" title="Home" >
 							<i class="fa fa-home"> </i>
 						</a>
 					</li>
-					
-					<li >
-						<a href="#employeeReqSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"  title="Employee Request">
-							<i class="fa fa-users"> </i>
-						</a>
-						<div class="collapse list-unstyled" id="employeeReqSubmenu">
-							<div class=	"dropdown-divider"></div>
-							<a href="approval_req_list.html"> Approval Requests </a>
-							<div class="dropdown-divider"></div>
-							<a href="approval_history.html"> Approval History </a>
-							<div class=	"dropdown-divider"></div>
-     					</div>
-     				</li>
 
-					<li >
-						<a href="request_item.html"> 		
+					<li class="active">
+						<a href="request_item.html" title="Items"> 						
 							<i class="fa fa-briefcase"></i>
 						</a>
 					</li>
-					<li class="active">
+					<li>
 						<a href="#myRequestSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"  title="MyRequest">
 							<i class="fa fa-file"> </i>
 						</a>
@@ -83,7 +70,7 @@
 						</div>
 						<div class="dropdown">
 							<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
-								<i class="fa fa-user">Nama Superior </i><!-- Masukkan data login --> 
+								<i class="fa fa-user"> Employee Name </i><!-- Masukkan data login --> 
 								</button>
 								<ul class="dropdown-menu">
 									<li> <a href="change_password.html" class="dropdown-item"> change password </a> </li>
@@ -91,46 +78,63 @@
 									<li> <a href="logout.html"class="dropdown-item" > log out </a> </li>
 								</ul>
 						</div>
-					</div>
+					</div>	
 				</nav>
 				<div class="container">
-					<h1> Returned item <a href="my_request.html"> <button type="button" class="close">&times;</button> </a></h1>		
-					<div class="table-responsive-lg">
-				    <form action="">
-					<table class="table table-bordered" id="tbl_returned_item">
-						<thead>
-						<tr>
-							<th> No </th>
-							<th> Request Id	</th>
-							<th> Item id </th>
-							<th> Item name </th>
-							<th> Quantity </th>
-							<th> Requested date </th>
-							<th> Approved Date </th>
-							<th> Handover date  </th>
-							<th> Returned date </th>
-						</tr>
-						</thead>
-						<tbody>	
-						<tr>
-							<td> </td>
-							<td> </td>
-							<td> </td>
-							<td> </td>
-							<td> </td>
-							<td> </td>
-							<td> </td>
-							<td> </td>
-							<td> </td> 
-						</tr>
-						</tbody>	
-					</table>
-				</form>
- 								
+					<h1> Request Item </h1>
+  						<div class="col-md-10">
+  	                 		<div class="btn btn-inline">
+					            <button type="button" class="btn btn-light" id="submit_item"> <span class="fa fa-paper-plane"> </span> Submit item request </button>
+					        </div>   
+					    </div>   
+                        <div class="col-md-10">
+                            <div class="table-responsive">
+					        <table class="table" id="tbl_employee">
+					          <thead>
+					            <tr>
+					               <th>
+					               	<input type="checkbox" id="check-all"/>
+					               	</th>
+									<th> No </th>
+					              	<th> Item ID </th>
+					              	<th> Name  </th>
+					              	<th> Price </th>
+					              	<th> Quantity </th>
+					              	<th> Image </th>
+					              	<th> Description </th>
+					              	<th> Stock </th			
+					              </tr>
+					          </thead>
+					          <tbody>
+					              <tr>
+					              <td><input type="checkbox" id="cek_item[]">
+					              	<input type="hidden" name="itemID[]" id="itemID[]" value="itemID[]">
+					              	<input type="hidden" name="name[]" id="name[]" value="name[]">
+					              	<input type="hidden" name="price[]" id="price[]" value="price[]">
+					              	<input type="hidden" name="quantity[]" id="quantity[]" value="quantity[]">
+					              	<input type="hidden" name="imagePath[]" id="imagePath[]" value="imagePath[]">
+					              	<input type="hidden" name="description[]" id="description[]" value="description[]">
+					              	<input type="hidden" id="stock[]" value="stock[]" name="stock[]">
+					              </td>
+					              <td> <!-- Nomor ++ --> </td>
+					              <td><!-- ajax panggil itemID[] --> </td>
+					              <td><!-- ajax panggil name[] --></td>
+					              <td><!-- ajax panggil price[] --></td>
+					              <td><!-- ajax panggil quantity[] -->
+					              	<input type="text" name="quantity[]" id="quantity[]" placeholder="quantity">
+					              </td>
+					              <td><!-- ajax panggil imagePath[] --></td>
+					              <td><!-- ajax panggil description[] --> </td>					              
+					              <td><!-- ajax panggil stock[] --> </td>
+					            </tr>
+					          </tbody>
+					        </table>
+					      </div>
+				    </div>			
 				</div>	
-
 			</div>
 		</div>
+
 	
 	<!-- jQuery library -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -139,8 +143,9 @@
 	
 	<!-- Latest compiled JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-
+	
 	<!--custom javascript-->
 	<script type="text/javascript" src="../assets/js/navbar.js"></script>
+	
 	</body>
 </html>

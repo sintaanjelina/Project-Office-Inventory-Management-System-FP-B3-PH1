@@ -6,14 +6,15 @@
 		
 	<!-- Latest compiled and minified CSS -->
 	<link  rel="stylesheet"  href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
-	
+	<link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css"/>
+
 	<!--Icon source-->
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 	
 	<!--Font-style used -->
 	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lato" />
-			
-	<!--This pages Customization css-->
+	
+<!--This pages Customization css-->
 	<link rel="stylesheet" type="text/css" href="../assets/css/home.css" />
 	
 	<link rel="stylesheet" type="text/css" href="../assets/css/input.css" />
@@ -36,12 +37,12 @@
 						</a>
 					</li>
 
-					<li >
+					<li class="active">
 						<a href="#employeeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"  title="Employee">
 							<i class="fa fa-users"> </i>
 						</a>
 						<div class="collapse list-unstyled" id="employeeSubmenu">
-							<div class=	"dropdown-divider"></div>
+							<div class=	"dropdown-divider"></div>		
 							<a href="employee.html"> Employee </a>
 							<div class="dropdown-divider"></div>
 							<a href="add_employee.html"> Add Employee </a>
@@ -65,7 +66,7 @@
 								<div class="dropdown-divider" ></div>
 						</ul>
 					</li>
-					<li class="active">
+					<li >
 						<li>
 						<a href="#requestSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"  title="Request Submenu">
 							<i class="fa fa-file"> </i>
@@ -103,20 +104,90 @@
 				</nav>
 				<div class="container">
 					<h1> Employee </h1>
-
-							
+  						<div class="col-md-10">
+  	                 		<div class="btn btn-inline">
+					            <button type="button" class="btn btn-warning" id="edit"> <span class="fa fa-pencil-square-o"> </span> Edit </button>
+					           	<button type="button" class="btn btn-danger" id="delete"> <span class="fa fa-trash-o"> </span> Delete </button>
+					        </div>   	
+					        <div class="btn-add">
+					           	<a type="button" class="btn btn-dark" id="add" href="add_employee.html"><i class="fa fa-user"> </i>
+					           		<i class="fa fa-plus"> </i>
+					           	 Add </a>
+					           </div>
+                        	</div>   
+                        <div class="col-md-10">
+                            <div class="table-responsive">
+					        <table class="table" id="tbl_employee">
+					          <thead>
+					            <tr>
+					               <th>
+					               	<input type="checkbox" id="check-all"/>
+					               	</th>
+					               	<th>No</th>
+					              	<th> Employee ID </th>
+					              	<th> Superior ID </th>
+					              	<th> Username </th>
+					              	<th> Password </th>
+					              	<th> Name </th> 
+					              	<th> Birth Date </th>
+					              	<th> Role </th>
+					              	<th> Division </th>
+					              	<th> Position </th>
+					              	<th> Contact Number </th>
+					              	<th> Action </th>
+					            </tr>
+					          </thead>
+					          <tbody>
+					            <tr>
+					              <td><input type="checkbox" id="cek_employee[]" />
+					              	<input type="hidden" name="employeeID[]" id="employeeID[]" value="employeeID[]">
+					              	<input type="hidden" name="superiorID[]" id=superiorID[] value="superiorID[]" >
+					              	<input type="hidden" name="username[]" id="username[]" value="username[]">
+					              	<input type="hidden"  name="password[]" id="password[]" value="password[]">
+					              	<input type="hidden" name="name[]" id="name[]" value="name[]">
+					              	<input type="hidden" name="birthdate[]" id="birthdate[]" value="birthdate[]">
+					              	<input type="hidden" name="role[]" id="role[]" value="role[]">
+					              	<input type="hidden" name="division[]" id="division[]" value="division[]">
+					              	<input type="hidden" name="position[]" id="position[]" value="position[]">
+					              	<input type="hidden" name="contactNumber[]" id="contactNumber[]" value="contactNumber[]">
+					              </td>
+					              <td> <!-- Nomor ++ --> </td>
+					              <td><!-- ajax panggil employeeID[] --> </td>
+					              <td><!-- ajax panggil superiorID[] --></td>
+					              <td><!-- ajax panggil username[] --></td>
+					              <td><!-- ajax panggil password[] --></td>
+					              <td><!-- ajax panggil name[] --></td>
+					              <td><!-- ajax panggil birthdate[] --></td>
+					              <td><!-- ajax panggil role[] --></td>
+					              <td><!-- ajax panggil division[] --></td>
+					              <td><!-- ajax panggil position[] --></td>
+					              <td><!-- ajax panggil contactNumber[] --></td>
+					              <td>
+					              	<div class="btn-group btn-inline">
+					              		<button type="button" class="btn btn-warning" id="edit"> <span class="fa fa-pencil-square-o"> </span></button>
+					           			<button type="button" class="btn btn-danger" id="delete"> <span class="fa fa-trash-o"> </span></button>
+					              	</div>
+					              </td>
+					            </tr>
+					          </tbody>
+					        </table>
+					      </div>
+				    </div>			
 				</div>	
 			</div>
 		</div>
+
 	
 	<!-- jQuery library -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script> 
-
+	<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+	
 	<!-- Latest compiled JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-
+	
 	<!--custom javascript-->
 	<script type="text/javascript" src="../assets/js/navbar.js"></script>
+	
 	</body>
 </html>

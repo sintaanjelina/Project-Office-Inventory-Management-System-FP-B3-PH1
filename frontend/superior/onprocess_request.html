@@ -6,7 +6,8 @@
 		
 	<!-- Latest compiled and minified CSS -->
 	<link  rel="stylesheet"  href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
-	
+	<link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css"/>
+
 	<!--Icon source-->
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 	
@@ -93,17 +94,11 @@
 					</div>
 				</nav>
 				<div class="container">
-					<h1> On Process Item</h1>		
-					 <div class="input-group col-md-4">
-				      <input class="form-control py-2" type="search" placeholder="Search..." id="search">
-				     		<span class="input-group-append">
-				                  <div class="input-group-text bg-transparent"><i class="fa fa-search"></i></div>
-				            </span>
-					</div>
-
+					<h1> On Process Item <a href="my_request.html"> <button type="button" class="close">&times;</button> </a></h1>		
 					<div class="table-responsive-lg">
 				    <form action="">
-					<table class="table table-bordered">
+					<table class="table table-bordered" id="tbl_onprocess_request">
+					<thead>
 					<tr>
 						<th> No </th>
 						<th> Request Id	</th>
@@ -113,8 +108,9 @@
 						<th> Requested date </th>
 						<th> Status </th>
 						<th> Action  </th>
-					
-					</tr>		
+					</tr>
+					</thead>
+					<tbody>		
 					<tr>
 						<td> </td>
 						<td> </td>
@@ -128,8 +124,8 @@
 								cancel
 							</button>
 						</td>
-						 
 					</tr>
+					</tbody>
 				</table>
 			</form>
  								
@@ -141,7 +137,8 @@
 	<!-- jQuery library -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script> 
-
+	<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+	
 	<!-- Latest compiled JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 

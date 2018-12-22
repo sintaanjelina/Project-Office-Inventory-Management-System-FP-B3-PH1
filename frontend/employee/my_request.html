@@ -7,7 +7,7 @@
 	<!-- Latest compiled and minified CSS -->
 	<link  rel="stylesheet"  href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css"/>
-	
+
 	<!--Icon source-->
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 	
@@ -25,32 +25,19 @@
 			<!--sidebar-->
 				<nav id="sidebar" class="box-shadow" >
 				<div class="sidebar-header">
-					<a href="home_superior.html" ><img src="../assets/images/icons/sidebar-header.png" class="center" alt="Home"/> </a>
+					<a href="home_employee.html" ><img src="../assets/images/icons/sidebar-header.png" class="center" alt="Home"/> </a>
 				</div>
 
 				<ul class="navbar-nav">
 					
 					<li >
-						<a href="home_superior.html" title="Home" >
+						<a href="home_employee.html" title="Home" >
 							<i class="fa fa-home"> </i>
 						</a>
 					</li>
-					
-					<li >
-						<a href="#employeeReqSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"  title="Employee Request">
-							<i class="fa fa-users"> </i>
-						</a>
-						<div class="collapse list-unstyled" id="employeeReqSubmenu">
-							<div class=	"dropdown-divider"></div>
-							<a href="approval_req_list.html"> Approval Requests </a>
-							<div class="dropdown-divider"></div>
-							<a href="approval_history.html"> Approval History </a>
-							<div class=	"dropdown-divider"></div>
-     					</div>
-     				</li>
 
-					<li >
-						<a href="request_item.html"> 		
+					<li>
+						<a href="request_item.html" title="Items"> 						
 							<i class="fa fa-briefcase"></i>
 						</a>
 					</li>
@@ -83,7 +70,7 @@
 						</div>
 						<div class="dropdown">
 							<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
-								<i class="fa fa-user">Nama Superior </i><!-- Masukkan data login --> 
+								<i class="fa fa-user">Nama Employee </i><!-- Masukkan data login --> 
 								</button>
 								<ul class="dropdown-menu">
 									<li> <a href="change_password.html" class="dropdown-item"> change password </a> </li>
@@ -94,40 +81,53 @@
 					</div>
 				</nav>
 				<div class="container">
-					<h1> Returned item <a href="my_request.html"> <button type="button" class="close">&times;</button> </a></h1>		
+					<h1> My Request </h1>	
+					<div class="col-md-10">
+  	                 		<div class="btn btn-inline">
+					            <a href="onprocess_request.html"><button type="button" class="btn btn-light"> <span class="fa fa-history"> </span> On Process </button>	</a>				
+					            <a href="returned_item.html">
+					            <button type="button" class="btn btn-light"> <span class="fa fa-download"> </span> Returned </button>
+					        	</a>
+							</div>   
+                        	</div>   
+                        <div class="col-md-10">
+                        	
 					<div class="table-responsive-lg">
 				    <form action="">
-					<table class="table table-bordered" id="tbl_returned_item">
-						<thead>
-						<tr>
-							<th> No </th>
-							<th> Request Id	</th>
-							<th> Item id </th>
-							<th> Item name </th>
-							<th> Quantity </th>
-							<th> Requested date </th>
-							<th> Approved Date </th>
-							<th> Handover date  </th>
-							<th> Returned date </th>
-						</tr>
-						</thead>
-						<tbody>	
-						<tr>
-							<td> </td>
-							<td> </td>
-							<td> </td>
-							<td> </td>
-							<td> </td>
-							<td> </td>
-							<td> </td>
-							<td> </td>
-							<td> </td> 
-						</tr>
-						</tbody>	
-					</table>
-				</form>
+					<table class="table table-bordered" id="tbl_my_request">
+					<thead>
+					<tr>
+						<th> Print </th>
+						<th> No </th>
+						<th> Request Id	</th>
+						<th> Item id </th>
+						<th> Item name </th>
+						<th> Quantity </th>
+						<th> Transaction  </th>
+						<th> Transaction Date </th>
+					</tr>
+					</thead>
+					<tbody>		
+					<tr>
+						<td> 
+							<button class="btn btn-light btn-inline" id="print">
+								<i class="fa fa-print"> </i> 
+							</button>
+						</td>
+						<td> </td>
+						<td> </td>
+						<td> </td>
+						<td> </td>
+						<td> </td>
+						<td> </td>
+						<td> </td>
+					</tr>
+					</tbody>
+				</table>
+			</form>
  								
 				</div>	
+
 
 			</div>
 		</div>

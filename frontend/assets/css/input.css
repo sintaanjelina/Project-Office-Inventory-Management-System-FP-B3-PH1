@@ -3,7 +3,7 @@ body{
 }
 
 form{
-	width:80%;
+	width:86%;
 	margin-left:5%;
 }
 
@@ -18,11 +18,38 @@ form{
 }
 .btn-danger{
 	margin-left:4%;
-	background-color: #0023ff;	
-	border: none;
+	background-color: red;	
 }
 
 .table{
 	margin-top: 3%;
 	text-align: center;		
 }
+
+.btn-warning, .btn-light {
+	background-color: #0023ff;	
+	border: none;
+	color:white;
+}
+
+.btn-light:hover{
+	background-color: white;
+	color:black;
+	border: 0.1em solid #0023ff; 	
+}
+.btn-add{
+	float: right;
+}
+
+button.close{
+	padding-top:0.6em;
+}
+
+/*table {
+    border-collapse: collapse;
+    width:300px;
+    overflow-x: scroll;
+    display: block;
+}
+
+*/
