@@ -42,7 +42,7 @@
 			form{
 				text-align:center;
 			}
-			input{
+			input, #login{
 				text-align:center;
 				width:10%;
 				padding:0.3%;
@@ -62,6 +62,18 @@
 			::placeholder { 
 				color: white;
 			}
+			#login{
+				width:6%;
+				margin-top:1em;
+				background-color: white;
+	  			color:black;
+	  			border: 2px solid #0023ff; 			
+	  		}	
+			#login:hover{
+				cursor: pointer;
+				  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+			}
+
 		</style>
 	</head>
 	<body>
@@ -70,9 +82,16 @@
 		<p> Office Inventory Management System </p>
 		
 		<form>	
-			<input type="text" name="username" id="username" placeholder="Username"/> 
-			</br>
-			<input type="password" name="password" id="password"  placeholder="Password"/>
+			<div> 
+				<input type="text" name="username" id="username" placeholder="Username"/> 
+			</div>
+			<div>
+				<input type="password" name="password" id="password"  placeholder="Password"/>
+			</div> 
+			<div>
+				<button id="login"> Login </button>
+			</div>
 		</form>	
+		<!-- ajax login nya disini -->
 	</body>
 </html> 
